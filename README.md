@@ -1,5 +1,5 @@
 # random-password-generator
-This webpage can be accessed by following its URL""
+This webpage can be accessed by following its URL"https://damiong22.github.io/random-password-generator/"
 debugging existing code for a random password generator 
 The purpose of this repo is to debug existing JavaScript code for a random password generator.
 The code would not return any results prior and also did not satisy the user story.

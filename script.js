@@ -9,9 +9,18 @@ function generatePassword() {
   // fullCriteria pulls strings based off of users answers .
   let fullCriteria = "";
   // Prompt to allow user to select password char length
-  const passwordlength = window.prompt("Choose  password length (8-128 characters). ");
+  let passwordlength = NaN;
+
+  while (isNaN(passwordlength) || passwordlength < 8 || passwordlength > 128) {
+    passwordlength = parseInt(window.prompt("Choose password length (8-128 characters)."));
+    
+    if (isNaN(passwordlength) || passwordlength < 8 || passwordlength > 128) {
+      console.log("Error: Please enter a valid password length between 8 and 128 characters.");
+    }
+  }
+  
   let password = "";
-  console.log(passwordlength)
+  console.log(passwordlength);
   // Prompt for password criteria to include 
   const passCrit = window.confirm("Would you like your password to include special characters?");
 
